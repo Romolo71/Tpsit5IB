@@ -1,9 +1,12 @@
 class Film {
-  final String _titolo;
-  final int _durata;
+  final String titolo;
+  final String genere;
+  final int durata;
+  final double? valutazione;
 
-  Film(this._titolo, this._durata);
+  const Film(this.titolo, this.genere, this.durata, this.valutazione);
 
-  String get titolo => _titolo;
-  int get durata => _durata;
+  @override
+  String toString() =>
+      '$titolo - $genere, $durata min, valutazione: ${valutazione ?? "nessuna recensione"}';
 }
